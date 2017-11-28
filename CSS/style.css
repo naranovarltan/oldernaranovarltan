@@ -31,6 +31,80 @@ body {
     font-size: 56px;
 }
 
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 45%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: #FFFFFF;
+    font-weight:bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    -webkit-border-radius: 0 3px 3px 0;
+    -moz-border-radius: 0 3px 3px 0;
+    border-radius: 0 3px 3px 0;
+}
+
+.next {
+    right: 0;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+.pag {
+    text-align: center;
+}
+
+.numbertext {
+    text-align: center;
+}
+
+.text {
+    color: #FFFFFF;
+    font-size: 22px;
+    padding: 8px 12px;
+    position: relative;
+    bottom: 50px;
+    text-align: center;
+}
+
+.dot {
+    cursor: pointer;
+    height: 13px;
+    width: 13px;
+    margin: 0 2px;
+    background-color: #bbbbbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, dot:hover {
+    background-color: #717171;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from{opacity:0.4}
+    to{opacity: 1}
+}
+
+
+
 nav {
     margin: auto;
     width: 880px;
@@ -95,7 +169,29 @@ nav {
     color: #000000;
 }
 
+.footer {
+    width: 100%;
+    height:auto;
+    margin: 0 auto;
+    text-align: center;
+    background-color: black;
+    padding-top: 25px;
+}
 
+.footer__link {
+    color: #ffffff;
+    font-size: 14px;
+    margin-left: 10px;
+}
+
+.footer__link:hover {
+    border-bottom: 1px solid #FFFFFF;
+
+}
+
+.author {
+    color: #FFFFFF;
+}
 
 @media screen and (max-width: 768px) {
     .topnav a:not(:first-child) {
