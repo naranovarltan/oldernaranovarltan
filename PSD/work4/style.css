@@ -1,0 +1,12 @@
+.navbar-dark .navbar-nav .nav-link:hover {
+    background-color: #62a29e;
+    border-radius: 5px;
+}
+
+.form-inline {
+    margin-left:168px;
+}
+
+.h2 {
+    color: #e1524b;
+}
