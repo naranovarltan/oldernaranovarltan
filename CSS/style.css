@@ -134,6 +134,11 @@ nav {
     display: none;
 }
 
+.icon {
+    background-color: lightgrey;
+    margin-top: -2px;
+}
+
 .main {
 }
 
@@ -196,7 +201,6 @@ nav {
 @media screen and (max-width: 768px) {
     .topnav a:not(:first-child) {
         display: none;
-        padding-top: 28px;
     }
     .topnav a.icon {
         float: right;
