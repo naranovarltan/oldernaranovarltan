@@ -32,7 +32,7 @@ body {
 }
 
 .slideshow-container {
-    max-width: 1000px;
+    max-width: 1062px;
     position: relative;
     margin: auto;
 }
@@ -58,7 +58,7 @@ body {
 }
 
 .prev:hover, .next:hover {
-    background-color: rgba(0,0,0,0.8);
+    background-color: rgba(0,0,0,0.6);
 }
 
 .pag {
@@ -164,10 +164,11 @@ nav {
 
 .main__item {
     width: 30%;
+    margin-bottom: 20px;
 }
 
 .main__img {
-    height: 175px;
+    height: 120px;
 }
 
 .main__link:visited{
@@ -240,5 +241,9 @@ nav {
 
     .main__item p {
         display: none;
+    }
+
+    .prev:hover, .next:hover {
+        background-color: rgba(0,0,0,0.0);
     }
 }
