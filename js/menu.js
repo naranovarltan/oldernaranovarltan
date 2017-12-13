@@ -1,5 +1,5 @@
-menu.onclick = function myFunction () {
-    var x = document.getElementById("myTopnav");
+myTopnav.onclick = function myFunction () {
+    let x = document.getElementById("myTopnav");
     if (x.className === 'topnav') {
         x.className += ' responsive';
     }
@@ -7,3 +7,4 @@ menu.onclick = function myFunction () {
         x.className = 'topnav';
     }
 }
+
