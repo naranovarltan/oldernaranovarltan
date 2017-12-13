@@ -4,5 +4,6 @@ document.body.onload = function () {
         if (!preloader.classList.contains('done')) {
             preloader.classList.add('done');
         }
+        preloader.style.zIndex = '-1';
     }, 1000);
 };
