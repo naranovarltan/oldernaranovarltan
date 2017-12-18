@@ -282,6 +282,10 @@ nav {
     .main__item {
         width: 45%;
     }
+
+    .fab {
+        font-size: 100px;
+    }
 }
 
 @media screen and (max-width: 468px) {
