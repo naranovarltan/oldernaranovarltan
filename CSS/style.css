@@ -148,7 +148,6 @@ body {
 
 nav {
     margin: auto;
-    width: 880px;
     text-align: center;
 }
 
@@ -263,15 +262,17 @@ nav {
         position: relative;
     }
     .topnav.responsive a.icon {
+        transition: 0s;
         position: absolute;
         right: 0;
         top: 0;
     }
 
     .topnav a.icon {
+        transition: 0s;
         position: absolute;
         right: 0;
-        top: 98px;
+        top: 96px;
     }
 
     .topnav.responsive a {
