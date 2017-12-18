@@ -26,7 +26,7 @@ body {
     transition: 1s all;
     opacity: 1;
     visibility: visible;
-    background: url("../img/1352477369225.gif");
+    background: url("../img/1352477369225.gif") center;
 }
 
 .done {
