@@ -5,5 +5,5 @@ document.body.onload = function () {
             preloader.classList.add('done');
         }
         preloader.style.zIndex = '-1';
-    }, 1000);
+    }, 0);
 };
