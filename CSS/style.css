@@ -305,6 +305,7 @@ main::after {
 
 .project__item-title:hover {
     text-decoration: underline;
+    color: rgb(0, 0, 0);
 }
 
 @media screen and (max-width: 768px) {
