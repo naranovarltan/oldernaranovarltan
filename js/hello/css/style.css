@@ -1,0 +1,33 @@
+.done {
+    text-decoration: line-through;
+    opacity: .5;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    padding: 20px 0px;
+    border-bottom: 1px solid #ccc;
+}
+
+.deleteItem {
+    color: #ff0000;
+    float: right;
+}
+
+input[type=checkbox] {
+    margin-right: 20px;
+}
+
+.saveItem {
+    display: none;
+}
+
+.editText {
+    display: none;
+}
+
