@@ -14,7 +14,7 @@ li {
     border-bottom: 1px solid #ccc;
 }
 
-.deleteItem {
+.deleteTask {
     color: #ff0000;
     float: right;
 }
@@ -23,11 +23,11 @@ input[type=checkbox] {
     margin-right: 20px;
 }
 
-.saveItem {
+.saveTask {
     display: none;
 }
 
-.editText {
+.editTask {
     display: none;
 }
 

@@ -1,45 +1,45 @@
 $(document).ready(function(){
-    $("#addItem").on("click", addItem);
-    $("#todos").on("change", ".completeItem", completeItem);
-    $("#todos").on("click", ".deleteItem", deleteItem);
-    $("#newTodo").on("keypress", function (event){
+    $("#addTask").on("click", addTask);
+    $("#taskList").on("change", ".completeITask", completeITask);
+    $("#taskList").on("click", ".deleteTask", deleteTask);
+    $("#newTask").on("keypress", function (event){
         if (event.keyCode === 13) {
-            addItem();
+            addTask();
             event.preventDefault();
         }
     });
-    $("#todos").on("dblclick", ".todoText", startEdit);
-    $("#todos").on("click", ".saveItem", saveEdit);
+    $("#taskList").on("dblclick", ".textTask", startEdit);
+    $("#taskList").on("click", ".saveTask", saveEdit);
 
 
-    function addItem(event){
-        let newTodoText = $("#newTodo").val();
-        if (!newTodoText){
+    function addTask(event){
+        let newTaskText = $("#newTask").val();
+        if (!newTaskText){
             return false;
         } else {
-            $("#todos").append('<li> <input type="checkbox" class="completeItem"> <span class="todoText">' + newTodoText + '</span><input type="text" class="editText"><button class="btn btn-info saveItem">save</button><span class="glyphicon glyphicon-trash deleteItem"></span></li>');
-            $("#newTodo").val("");
+            $("#taskList").append('<li> <input type="checkbox" class="completeITask"> <span class="textTask">' + newTaskText + '</span><input type="text" class="editTask"><button class="btn btn-info saveTask">save</button><span class="glyphicon glyphicon-trash deleteTask"></span></li>');
+            $("#newTask").val("");
         }
     }
-    function deleteItem(){
+    function deleteTask(){
         $(this).parent().remove();
     }
-    function completeItem(){
+    function completeITask(){
         $(this).parent().toggleClass("done");
     }
     function startEdit () {
-        let currenText = $(this).parent().find(".todoText").text();
-        $(this).parent().find(".editText").val(currenText);
-        $(this).parent().find(".editText").show();
-        $(this).parent().find(".saveItem").show();
-        $(this).parent().find(".todoText").hide();
+        let currenText = $(this).parent().find(".textTask").text();
+        $(this).parent().find(".editTask").val(currenText);
+        $(this).parent().find(".editTask").show();
+        $(this).parent().find(".saveTask").show();
+        $(this).parent().find(".textTask").hide();
     }
     function saveEdit () {
         $(this).hide();
-        let newValue = $(this).parent().find(".editText").val();
-        $(this).parent().find(".editText").hide();
-        $(this).parent().find(".todoText").text(newValue);
-        $(this).parent().find(".todoText").show();
+        let newValue = $(this).parent().find(".editTask").val();
+        $(this).parent().find(".editTask").hide();
+        $(this).parent().find(".textTask").text(newValue);
+        $(this).parent().find(".textTask").show();
     }
 
 
