@@ -1,6 +1,7 @@
 .done {
     text-decoration: line-through;
     opacity: .5;
+    flex: 1;
 }
 
 ul {
@@ -17,9 +18,26 @@ li {
     align-items: center;
 }
 
+.page-header {
+    border-bottom: none;
+}
+
 .textTask {
     flex: 1;
     margin-left: 5px;
+}
+
+#taskList {
+    margin-bottom: 20px;
+}
+
+.editTask {
+    margin-left: 5px;
+}
+
+.doneTask {
+    margin-bottom: 3px;
+    cursor: pointer;
 }
 
 .deleteTask {
@@ -29,10 +47,21 @@ li {
 .saveTask {
     display: none;
     margin: 0 5px;
+    height: 20px;
 }
 
 .editTask {
     display: none;
     flex: 1;
+    height: 22px;
 }
 
+.counter {
+    font-size: 10px;
+    margin-left: 5px;
+}
+
+.counter:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
