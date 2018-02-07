@@ -19,6 +19,7 @@ li {
 
 .textTask {
     flex: 1;
+    margin-left: 5px;
 }
 
 .deleteTask {

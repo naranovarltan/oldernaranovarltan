@@ -78,7 +78,7 @@ $(document).ready(function(){
             const li = $(`
                 <li>
                     <span class="${todo.done ? 'glyphicon glyphicon-check' : 'glyphicon glyphicon-unchecked'} doneTask" data-index=${index}></span>
-                    <span class="textTask" data-index=${index}> ${todo.title} </span>
+                    <span class="textTask ${todo.done ? 'done' : ''}" data-index=${index}> ${todo.title} </span>
                     <input type="text" class="editTask">
                     <button class="btn btn-info saveTask">save</button>
                     <span class="deleteTask glyphicon glyphicon-trash" data-index=${index}></span>
