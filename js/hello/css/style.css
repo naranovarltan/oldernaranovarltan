@@ -12,22 +12,26 @@ ul {
 li {
     padding: 20px 0px;
     border-bottom: 1px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.textTask {
+    flex: 1;
 }
 
 .deleteTask {
     color: #ff0000;
-    float: right;
-}
-
-input[type=checkbox] {
-    margin-right: 20px;
 }
 
 .saveTask {
     display: none;
+    margin: 0 5px;
 }
 
 .editTask {
     display: none;
+    flex: 1;
 }
 
