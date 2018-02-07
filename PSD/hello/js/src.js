@@ -1,12 +1,9 @@
 $(document).ready(function() {
     $("#addTask").on("click", preAddTask);
     $("#completeTask").on("click", setDoneTask);
-    $("#checkedCounter")
-        .on("click", ".showCheckedTodos", renderCheckedTodos)
-        .on("click", ".showTodos", showTodos);
-    $("#uncheckedCounter")
-        .on("click", ".showUncheckedTodos", renderUncheckedTodos)
-        .on("click", ".showTodos", showTodos);
+    $("#counterList").on("click", ".showCheckedTodos", renderCheckedTodos);
+    $("#counterList").on("click", ".showUncheckedTodos", renderUncheckedTodos);
+    $("#counterList").on("click", ".allTodos", renderTodos);
     $("#taskList")
         .on("click", ".deleteTask", preDeleteTask)
         .on("click", ".doneTask", preSetPDoneTask)
@@ -25,7 +22,26 @@ $(document).ready(function() {
         }
     });
 
-    const todos = [];
+    const todos = [],
+        countersList = [{
+            id: "allCounter",
+            name: "Всего задач:",
+            type: "warning",
+            classB: "allTodos",
+            buttonList: "Показать"
+        }, {
+            id: "uncheckedCounter",
+            name: "Невыполнено:",
+            type: "info",
+            classB: "showUncheckedTodos",
+            buttonList: "Показать"
+        }, {
+            id: "checkedCounter",
+            name: "Выполнено:",
+            type: "success",
+            classB: "showCheckedTodos",
+            buttonList: "Показать"
+        }];
 
     function filterTodos() {
         const checkedTodos = [];
@@ -39,8 +55,12 @@ $(document).ready(function() {
             }
         });
 
-        const checkedCounter = checkedTodos.length;
-        const uncheckedCounter = uncheckedTodos.length;
+        const checkedCounter = checkedTodos.length,
+            uncheckedCounter = uncheckedTodos.length,
+            allCounter = todos.length;
+
+        $("#allCounter").find("span").empty();
+        $("#allCounter").find("span").append(allCounter);
 
         $("#checkedCounter").find("span").empty();
         $("#checkedCounter").find("span").append(checkedCounter);
@@ -146,8 +166,7 @@ $(document).ready(function() {
             $("#taskList").append(li);
         });
         filterTodos();
-        renderPagPage();
-        console.log(todos);
+        renderCounterList();
     }
 
     function renderCheckedTodos() {
@@ -204,14 +223,22 @@ $(document).ready(function() {
             $("#taskList").append(li);
         });
         filterTodos();
+        console.log(todos, uncheckedTodos);
     }
 
-    function showTodos() {
-        renderTodos();
-    }
-
-    function renderPagPage() {
-
+    function renderCounterList() {
+        $("#counterList > div").remove();
+        countersList.forEach((counter, id, name, type) => {
+            const button = $(`
+                <div class="alert col-sm-4 counter alert-${counter.type}" id="${counter.id}" role="alert">
+                    ${counter.name} 
+                    <span class="${counter.id}"></span>
+                    <a class="${counter.classB}">${counter.buttonList}</a>
+                </div>
+            `);
+            $("#counterList").append(button);
+        });
+        filterTodos();
     }
 
 });

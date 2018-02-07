@@ -57,11 +57,13 @@ li {
 }
 
 .counter {
-    font-size: 10px;
-    margin-left: 5px;
+    font-size: 12px;
 }
 
 .counter:hover {
-    text-decoration: underline;
     cursor: pointer;
+}
+
+.borderCounter {
+    border: 2px solid #ff0000;
 }
